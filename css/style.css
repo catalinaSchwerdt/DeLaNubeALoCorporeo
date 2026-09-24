@@ -1,0 +1,1408 @@
+/* ==========================================================================
+   TIPOGRAFÍAS
+   ========================================================================== */
+@font-face {
+  font-family: 'Gasoek';
+  src: url('../fonts/GasoekOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gantari';
+  src: url('../fonts/Gantari-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   RESET Y BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #000000;
+  overflow-x: hidden;
+  color: #ffffff;
+  font-family: 'Gantari', sans-serif;
+}
+
+/* Wrapper que contiene todo y corta la página donde terminan los cables */
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Capa de fondo: se adapta a la altura exacta de los cables y recorta el sobrante */
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fondo-img {
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* Cables: en flujo normal con padding-top para que la altura de cables3 determine el fin de la página */
+.cables-image {
+  position: relative;
+  padding-top: 130px;
+  margin-bottom: -550px;
+  /* recorta 150px del final de la página */
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: flow-root;
+}
+
+/* Aplica solo a los SVG de cables, no al reloj, ni al robot ni al auto */
+.cables-image img:not(.reloj-cables):not(.robot-cables):not(.auto-cables) {
+  display: block;
+  width: 100%;
+}
+
+/* Wrapper relativo para anclar el auto sobre cables1 */
+.cables1-wrapper {
+  position: relative;
+}
+
+/* Auto futurista anclado a la parte superior derecha de cables1 */
+.cables-image .auto-cables {
+  position: absolute;
+  bottom: 740px;
+  right: -100px;
+  width: 480px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Separacion de 60px entre el borde inferior de cables y el superior de cables2 */
+.cables-gap {
+  height: 60px;
+}
+
+/* Wrapper relativo para anclar el reloj sobre cables2 */
+.cables2-wrapper {
+  position: relative;
+}
+
+/* Mayor especificidad para ganarle a .cables-image img */
+.cables-image .reloj-cables {
+  position: absolute;
+  bottom: 640px;
+  left: -45px;
+  width: 700px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Wrapper relativo para anclar el robot sobre cables3 */
+.cables3-wrapper {
+  position: relative;
+  margin-top: 130px;
+  /* baja cables3 y robotCables 50px */
+}
+
+/* Robot anclado a la parte superior derecha de cables3 */
+.cables-image .robot-cables {
+  position: absolute;
+  bottom: 680px;
+  right: 100px;
+  width: 350px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Contenido: se superpone sobre el fondo desde el inicio */
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   TÍTULO PRINCIPAL DE LA INFOGRAFÍA
+   ========================================================================== */
+.font-gasoek {
+  font-family: 'Gasoek', 'Gasoek One', Impact, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.font-gantari {
+  font-family: 'Gantari', sans-serif;
+  font-weight: 700;
+}
+
+.infografia-header {
+  padding-top: 70px;
+  padding-left: clamp(24px, 5vw, 70px);
+  padding-right: clamp(24px, 5vw, 70px);
+  text-align: left;
+}
+
+.infografia-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  user-select: none;
+}
+
+/* Renglón 1: "De la" */
+.titulo-linea-1 {
+  display: block;
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  color: #f0f0f0;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.12em;
+  text-shadow: -8px 10px 10px rgba(0, 0, 0, 0.85);
+}
+
+/* Renglón 2: "NUBE a lo CORPOREO" */
+.titulo-linea-2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.28em;
+  font-size: clamp(2.8rem, 6.2vw, 5.8rem);
+  line-height: 0.95;
+  color: #ffffff;
+  text-shadow: -8px 10px 10px rgba(0, 0, 0, 0.85);
+}
+
+/* "a lo" en medio de las palabras en mayúscula */
+.titulo-linea-2 .palabra-enlace {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.01em;
+  transform: translateY(-0.06em);
+}
+
+/* ==========================================================================
+   SUBTÍTULO
+   ========================================================================== */
+.infografia-subtitulo {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.2vw, 1.9rem);
+  color: #00C3D0;
+  margin-top: 0.55em;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   PÁRRAFO INTRODUCTORIO
+   ========================================================================== */
+.infografia-intro {
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+  margin-top: 1.1em;
+  max-width: 680px;
+  letter-spacing: 0.01em;
+}
+
+/* Palabras destacadas dentro del párrafo */
+.infografia-intro .texto-destacado {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   BOTONES INTRO
+   ========================================================================== */
+.botones-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9em;
+  margin-top: 1.4em;
+  max-width: 680px;
+}
+
+.btn-intro {
+  font-family: 'Gantari', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: #ffffff;
+  background-color: rgba(37, 128, 142, 0.87);
+  border: none;
+  border-radius: 50px;
+  padding: 0.7em 1.6em;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75), 0 0 14px rgba(37, 128, 142, 0.35);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-intro:hover {
+  background-color: rgba(37, 128, 142, 1);
+  transform: translateY(-2px);
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.85), 0 0 26px rgba(37, 128, 142, 0.8);
+}
+
+.btn-intro:active {
+  transform: translateY(0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   NÚCLEO 1 — "Desde los PRIMEROS AGENTES"
+   Posicionado a la derecha entre cables1 y cables2
+   Ajustá el valor de top según lo que veas en el browser.
+   ========================================================================== */
+.nucleo {
+  position: absolute;
+  /* ancho controlado por el contenido (titulo) — sin max-width fijo */
+}
+
+.nucleo-1 {
+  top: 1100px;
+  /* ← ajustar si queda muy arriba o muy abajo */
+  right: clamp(24px, 5vw, 70px);
+  text-align: right;
+}
+
+.nucleo-1 .nucleo-titulo {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nucleo-1 .nucleo-svg-wrapper {
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   NÚCLEO 2: Los ROBOTS del siglo XXI (entre cables2 y cables3)
+   ========================================================================== */
+.nucleo-2 {
+  top: 2370px;
+  /* ← ajustar si queda muy arriba o muy abajo */
+  left: clamp(24px, 5vw, 70px);
+  text-align: left;
+  max-width: clamp(460px, 48vw, 760px);
+}
+
+.nucleo-2 .nucleo-titulo {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.nucleo-2 .nucleo-svg-wrapper {
+  justify-content: flex-start;
+}
+
+/* Título del núcleo: 2 renglones en columna */
+.nucleo-titulo {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* Renglón 1: "Desde los" / "Los" — Gantari Bold, tamaño menor */
+.nucleo-titulo-l1 {
+  display: block;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #f0f0f0;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.08em;
+  text-shadow: -8px 10px 10px rgba(0, 0, 0, 0.85);
+}
+
+/* Renglón 2: Gasoek / Gantari mixto o en un solo renglón */
+.nucleo-titulo-l2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.28em;
+  font-size: clamp(2.4rem, 5.2vw, 5rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-shadow: -8px 10px 10px rgba(0, 0, 0, 0.85);
+}
+
+.nucleo-titulo-l2 .palabra-enlace {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.01em;
+  transform: translateY(-0.06em);
+}
+
+/* Subtítulo del núcleo */
+.nucleo-subtitulo {
+  font-weight: 700;
+  font-size: clamp(1rem, 1.9vw, 1.6rem);
+  color: #00C3D0;
+  margin-top: 0.55em;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* Párrafo del núcleo */
+.nucleo-parrafo {
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+  margin-top: 1em;
+  letter-spacing: 0.01em;
+  width: 100%;
+}
+
+/* Semibold en palabras clave del párrafo del núcleo */
+.nucleo-parrafo .texto-destacado {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   SVG DECORATIVO DE LOS NÚCLEOS
+   ========================================================================== */
+.nucleo-svg-wrapper {
+  margin-top: 1.4em;
+  display: flex;
+}
+
+.nucleo-svg {
+  width: clamp(480px, 45vw, 620px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   BOTONES DE EMERGENCIA — NÚCLEO 1 (Inspirados en Botones.png)
+   ========================================================================== */
+.botones-emergencia {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2rem, 4.2vw, 4.2rem);
+  margin-top: calc(1.6em + 50px);
+  width: 100%;
+}
+
+.btn-emergencia-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9em;
+}
+
+/* Contenedor del botón interactivo */
+.btn-emergencia {
+  position: relative;
+  width: clamp(98px, 6.8vw, 126px);
+  height: clamp(98px, 6.8vw, 126px);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  display: block;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base exterior fija (aro lacado rojo con relieve y sombra) */
+.btn-base {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 32%, #db0008 0%, #aa0006 48%, #660003 82%, #380001 100%);
+  padding: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.75),
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 3px 5px rgba(255, 255, 255, 0.65),
+    inset 0 -5px 9px rgba(0, 0, 0, 0.75),
+    0 0 20px rgba(220, 10, 20, 0.35);
+  transition: box-shadow 0.25s ease;
+}
+
+/* Brillo especular superior del aro exterior */
+.btn-base::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: 60%;
+  height: 16%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+/* Cavidad interior oscura donde encaja el pulsador */
+.btn-base::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  box-shadow: inset 0 5px 12px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* El pulsador central que realmente se aprieta (se hunde) */
+.btn-cap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 42% 35%, #ff2e3b 0%, #c80007 42%, #850003 82%, #4a0001 100%);
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -3px 7px rgba(0, 0, 0, 0.6);
+  transition: transform 0.1s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.1s ease, filter 0.15s ease;
+  will-change: transform, box-shadow;
+}
+
+/* Reflejo curvado brillante tipo gel lacado en el pulsador */
+.btn-cap::before {
+  content: '';
+  position: absolute;
+  top: 9%;
+  left: 16%;
+  width: 68%;
+  height: 40%;
+  border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.05) 85%);
+  pointer-events: none;
+}
+
+/* Reflejo suave inferior */
+.btn-cap::after {
+  content: '';
+  position: absolute;
+  bottom: 8%;
+  left: 28%;
+  width: 44%;
+  height: 16%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255, 140, 140, 0.45) 0%, rgba(255, 140, 140, 0) 70%);
+  pointer-events: none;
+}
+
+/* Hover: el pulsador se levanta sutilmente y resplandece */
+.btn-emergencia:hover .btn-cap {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.65),
+    0 0 22px rgba(255, 30, 50, 0.6),
+    inset 0 2px 5px rgba(255, 255, 255, 0.7),
+    inset 0 -3px 7px rgba(0, 0, 0, 0.5);
+}
+
+.btn-emergencia:hover .btn-base {
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(220, 10, 20, 0.55),
+    inset 0 3px 5px rgba(255, 255, 255, 0.75),
+    inset 0 -5px 9px rgba(0, 0, 0, 0.8);
+}
+
+/* Active / Pressed: EL PULSADOR SE HUNDE DENTRO DE LA BASE (sensación real de apriete) */
+.btn-emergencia:active .btn-cap,
+.btn-emergencia.is-pressed .btn-cap {
+  transform: translateY(6px) scale(0.94);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    inset 0 5px 10px rgba(0, 0, 0, 0.85),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.25);
+  filter: brightness(0.9);
+}
+
+/* Etiqueta del botón */
+.btn-emergencia-label {
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  user-select: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-emergencia-item:hover .btn-emergencia-label {
+  color: #ff3344;
+  text-shadow: 0 0 14px rgba(255, 51, 68, 0.85), 0 2px 8px rgba(0, 0, 0, 0.9);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   BOTÓN DESTACADO NÚCLEO 2 — "¡Descubrí que robot sos!"
+   ========================================================================== */
+.nucleo-accion-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.btn-intro.btn-magenta {
+  background-color: rgba(195, 14, 141, 0.87);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.75), 0 0 16px rgba(195, 14, 141, 0.35);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  padding: 0.8em 2em;
+}
+
+.btn-intro.btn-magenta:hover {
+  background-color: #C30E8D;
+  transform: translateY(-2px);
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.85), 0 0 26px rgba(195, 14, 141, 0.7);
+}
+
+.btn-intro.btn-magenta:active {
+  transform: translateY(0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   POPUP MODAL — QUIZ "¿DESCUBRÍ QUE ROBOT SOS?" (fondoQuiz.svg)
+   ========================================================================== */
+.modal-quiz-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 40px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-quiz-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Tarjeta del quiz que enmarca a fondoQuiz.svg y contendrá los pasos */
+.quiz-card {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(24px, 4.2vw, 54px);
+  background-color: #0c0514;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95);
+  transform: scale(0.9) translateY(24px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-quiz-overlay.is-open .quiz-card {
+  transform: scale(1) translateY(0);
+}
+
+/* Imagen de fondo SVG del quiz */
+.quiz-bg-img {
+  width: 100%;
+  height: auto;
+  max-height: 86vh;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  background-color: #1d7feea7;
+}
+
+/* Card de modal para imágenes informativas (ej: ¿Qué es un robot?) */
+.modal-image-card {
+  background-color: transparent;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95);
+}
+
+.modal-card-img {
+  width: 100%;
+  height: auto;
+  max-height: 86vh;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  border-radius: clamp(24px, 4.2vw, 54px);
+}
+
+/* Botones de cerrar y volver dentro de los popups de imagen:
+   15 px más adentro respecto a los valores base del quiz */
+.modal-image-card .quiz-close-btn {
+  top: calc(clamp(12px, 2.5vw, 28px) + 15px);
+  right: calc(clamp(14px, 2.8vw, 34px) + 15px);
+}
+
+/* X del modal de fuentes: más a la izquierda */
+#modal-fuentes .quiz-close-btn {
+  right: calc(clamp(14px, 2.8vw, 34px) + 90px);
+}
+
+.modal-image-card .modal-back-btn {
+  top: calc(clamp(12px, 2.5vw, 28px) + 15px);
+  left: calc(clamp(14px, 2.8vw, 34px) + 15px);
+}
+
+/* Capa overlay para los botones del popup ¿Qué tipos hay? */
+.tipos-botones-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* El lateral izquierdo queda tocando el centro exacto de la imagen de fondo */
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Los botones se alinean al lateral izquierdo, tocando el centro */
+  justify-content: center;
+  gap: 30px;
+  /* 30px separados uno del otro */
+  padding: 4% 2% 4% 0;
+  pointer-events: auto;
+  z-index: 6;
+}
+
+/* Botones de categoría — más largos, color #836F87 */
+.btn-tipos {
+  background-color: rgba(131, 111, 135, 0.92);
+  box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.75), 0 0 16px rgba(131, 111, 135, 0.4);
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  padding: 1.05em 3.2em;
+  width: auto;
+  min-width: clamp(300px, 36vw, 440px);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-tipos:hover {
+  background-color: #836F87;
+  transform: translateY(-2px);
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.85), 0 0 26px rgba(131, 111, 135, 0.75);
+}
+
+.btn-tipos:active {
+  transform: translateY(0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   POPUP "¿Qué tipos hay? 3": SEGÚN SU FUNCIÓN (8 botones rodeando al robot)
+   ========================================================================== */
+.funcion-botones-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Botones más grandes que ocupan bien el espacio alrededor del robot */
+.btn-funcion {
+  position: absolute;
+  background-color: rgba(131, 111, 135, 0.94);
+  box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.8), 0 0 18px rgba(131, 111, 135, 0.45);
+  font-size: clamp(0.88rem, 1.24vw, 1.15rem);
+  padding: 0.72em 1.55em;
+  white-space: nowrap;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.2s ease;
+  user-select: none;
+  border-radius: 9999px;
+  line-height: 1.25;
+}
+
+.btn-funcion:hover {
+  background-color: #836F87;
+  transform: translate(-50%, -50%) translateY(-2px) scale(1.05);
+  box-shadow: 5px 9px 22px rgba(0, 0, 0, 0.9), 0 0 26px rgba(131, 111, 135, 0.8);
+}
+
+.btn-funcion:active {
+  transform: translate(-50%, -50%) scale(0.97);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* 8 posiciones esparcidas y bajadas para no tocar con el título superior */
+.btn-funcion.pos-1 {
+  left: 22%;
+  top: 30%;
+}
+
+/* 🏭 INDUSTRIALES (Arriba - Izquierda) */
+.btn-funcion.pos-2 {
+  left: 78%;
+  top: 30%;
+}
+
+/* 👨‍🏫 EDUCATIVOS (Arriba - Derecha) */
+.btn-funcion.pos-3 {
+  left: 84%;
+  top: 49%;
+}
+
+/* 🚀 DE EXPLORACIÓN (Lateral derecho alto) */
+.btn-funcion.pos-4 {
+  left: 84%;
+  top: 68%;
+}
+
+/* 🏥 MÉDICOS (Lateral derecho bajo) */
+.btn-funcion.pos-5 {
+  left: 69%;
+  top: 86%;
+}
+
+/* 🪖 MILITARES (Abajo - Derecha) */
+.btn-funcion.pos-6 {
+  left: 31%;
+  top: 86%;
+}
+
+/* 🔬 DE INVESTIGACIÓN (Abajo - Izquierda) */
+.btn-funcion.pos-7 {
+  left: 16%;
+  top: 68%;
+}
+
+/* 🏠 DOMÉSTICOS (Lateral izquierdo bajo) */
+.btn-funcion.pos-8 {
+  left: 16%;
+  top: 49%;
+}
+
+/* 🧑‍🔧 DE SERVICIOS (Lateral izquierdo alto) */
+
+/* ==========================================================================
+   POPUP NÚCLEO 2: "ROBOTS + IA" (robotMasIA1.svg)
+   ========================================================================== */
+.robots-ia-botones-overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  /* Centrado horizontalmente al medio del SVG */
+  top: 65%;
+  /* Un poco más arriba que antes */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.4vw, 36px);
+  z-index: 6;
+  pointer-events: auto;
+}
+
+/* 3 botones parecidos en color y forma a los de ¿queTiposHay¿1 */
+.btn-ia {
+  background-color: rgba(131, 111, 135, 0.94);
+  box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.75), 0 0 16px rgba(131, 111, 135, 0.4);
+  font-size: clamp(0.9rem, 1.25vw, 1.15rem);
+  padding: 0.75em 2.4em;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.2s ease;
+  user-select: none;
+}
+
+.btn-ia:hover {
+  background-color: #836F87;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.85), 0 0 24px rgba(131, 111, 135, 0.75);
+}
+
+.btn-ia:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   POPUP NÚCLEO 1: "IAs ACTUALES" (IAsActuales.svg) — columna de 4 botones
+   ========================================================================== */
+.ias-actuales-botones-overlay {
+  position: absolute;
+  left: 7.8%;
+  top: 54%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(10px, 1.6vw, 22px);
+  z-index: 6;
+  pointer-events: auto;
+  width: auto;
+  max-width: 38%;
+}
+
+/* Botones de las categorías de IAs Actuales */
+.btn-ias-actuales {
+  background-color: rgba(131, 111, 135, 0.94);
+  box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.75), 0 0 16px rgba(131, 111, 135, 0.4);
+  font-size: clamp(0.85rem, 1.2vw, 1.12rem);
+  padding: 0.85em 2.2em;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.2s ease;
+  user-select: none;
+  min-width: clamp(210px, 25vw, 320px);
+}
+
+.btn-ias-actuales:hover {
+  background-color: #836F87;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.85), 0 0 24px rgba(131, 111, 135, 0.75);
+}
+
+.btn-ias-actuales:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+/* ==========================================================================
+   POPUP NÚCLEO 1: "TIPOS DE IA" (TiposDeIA.svg) — columna de 3 botones
+   ========================================================================== */
+.tipos-ia-botones-overlay {
+  position: absolute;
+  left: 11%;
+  top: 59%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(10px, 1.5vw, 22px);
+  z-index: 6;
+  pointer-events: auto;
+  width: auto;
+  max-width: 48%;
+}
+
+.btn-tipo-ia {
+  background-color: rgba(131, 111, 135, 0.94);
+  box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.75), 0 0 16px rgba(131, 111, 135, 0.4);
+  font-size: clamp(0.78rem, 1.05vw, 1.05rem);
+  padding: 0.85em 2em;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.2s ease;
+  user-select: none;
+  min-width: clamp(230px, 28vw, 390px);
+}
+
+.btn-tipo-ia:hover {
+  background-color: #836F87;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.85), 0 0 24px rgba(131, 111, 135, 0.75);
+}
+
+.btn-tipo-ia:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+/* Capa lista para alojar el contenido interactivo de cada pregunta */
+.quiz-content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 14%;
+  padding-bottom: 8%;
+  pointer-events: auto;
+  z-index: 5;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.quiz-content.is-transitioning {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Cruz de cierre en la esquina superior derecha */
+.quiz-close-btn {
+  position: absolute;
+  top: clamp(12px, 2.5vw, 28px);
+  right: clamp(14px, 2.8vw, 34px);
+  width: clamp(28px, 3vw, 38px);
+  height: clamp(28px, 3vw, 38px);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+  z-index: 10;
+  outline: none;
+}
+
+.quiz-close-btn:hover {
+  transform: rotate(90deg);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.quiz-close-btn:active {
+  transform: rotate(90deg) scale(0.92);
+}
+
+.quiz-close-icon {
+  width: 60%;
+  height: 60%;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  display: block;
+}
+
+/* Flechita de volver en la esquina superior izquierda */
+.modal-back-btn {
+  position: absolute;
+  top: clamp(12px, 2.5vw, 28px);
+  left: clamp(14px, 2.8vw, 34px);
+  width: clamp(28px, 3vw, 38px);
+  height: clamp(28px, 3vw, 38px);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+  z-index: 10;
+  outline: none;
+}
+
+.modal-back-btn:hover {
+  transform: translateX(-3px);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-back-btn:active {
+  transform: translateX(-5px) scale(0.92);
+}
+
+.modal-back-icon {
+  width: 60%;
+  height: 60%;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  display: block;
+}
+
+/* ==========================================================================
+   QUIZ — PREGUNTA Y OPCIONES DE RESPUESTA
+   ========================================================================== */
+
+/* Texto de la pregunta */
+.quiz-pregunta {
+  font-weight: 600;
+  /* semibold */
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: clamp(20px, 2.8vw, 36px);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
+  padding: 0 clamp(16px, 3vw, 40px);
+  width: 90%;
+}
+
+/* Grilla 2 columnas × 3 filas de botones de respuesta */
+.quiz-opciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: clamp(14px, 2vw, 26px);
+  width: 92%;
+  flex-shrink: 0;
+}
+
+/* Botón de opción individual */
+.quiz-opcion {
+  font-weight: 300;
+  /* light */
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  color: #ffffff;
+  background-color: rgba(175, 70, 125, 0.88);
+  border: none;
+  border-radius: 50px;
+  padding: 1em 1.2em;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.65);
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.quiz-opcion:hover {
+  background-color: #AF467D;
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.8), 0 0 20px rgba(175, 70, 125, 0.55);
+}
+
+.quiz-opcion:active {
+  transform: translateY(0);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.65);
+}
+
+/* ==========================================================================
+   QUIZ — RESULTADOS
+   ========================================================================== */
+
+/* Ajuste de espaciado para cuando se muestra la tarjeta de resultado */
+.quiz-content.is-resultado {
+  padding-top: clamp(24px, 5.5%, 52px);
+  padding-bottom: clamp(16px, 3.5%, 32px);
+}
+
+.quiz-resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  animation: fadeInResult 0.3s ease-out;
+}
+
+@keyframes fadeInResult {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título del robot (Gantari semibold, subrayado, amarillo #FFF600) */
+.quiz-resultado-titulo {
+  font-weight: 600;
+  /* semibold */
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  color: #FFF600;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: clamp(4px, 0.7vw, 8px);
+  text-decoration-thickness: clamp(2px, 0.3vw, 3px);
+  margin: 0 0 clamp(8px, 1.4vw, 16px) 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+  letter-spacing: 0.01em;
+}
+
+/* Texto descriptivo (Gantari light, centrado) */
+.quiz-resultado-desc {
+  font-weight: 300;
+  /* light */
+  font-size: clamp(0.95rem, 1.35vw, 1.18rem);
+  color: #ffffff;
+  text-align: center;
+  max-width: 760px;
+  width: 88%;
+  line-height: 1.5;
+  margin: 0 auto clamp(12px, 1.8vw, 22px) auto;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* Contenedor y tamaño de la imagen SVG del robot */
+.quiz-resultado-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.quiz-resultado-img {
+  width: auto;
+  max-width: 82%;
+  max-height: clamp(170px, 35vh, 340px);
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.75));
+  animation: floatRobot 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatRobot {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================================
+   BOTÓN INFERIOR DERECHO: INFORMACIÓN (informacion.svg)
+   ========================================================================== */
+.btn-informacion {
+  position: absolute;
+  bottom: clamp(14px, 1.8vw, 24px);
+  right: clamp(14px, 1.8vw, 24px);
+  width: clamp(38px, 3.2vw, 44px);
+  height: clamp(38px, 3.2vw, 44px);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.22s ease,
+    opacity 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-informacion:hover {
+  transform: scale(1.12);
+  filter: brightness(1.25) drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+}
+
+.btn-informacion:active {
+  transform: scale(0.92);
+  filter: brightness(0.95);
+}
+
+.btn-informacion .informacion-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   POPUP FUENTES DE INFORMACIÓN (fuentes.svg)
+   ========================================================================== */
+.fuentes-links-overlay {
+  position: absolute;
+  top: 29%;
+  left: 18%;
+  width: 74%;
+  height: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(7px, 1.1vw, 16px);
+  z-index: 6;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.fuente-link {
+  font-family: 'Gantari', sans-serif;
+  font-weight: 400;
+  /* Regular */
+  font-size: clamp(0.72rem, 1.22vw, 1.05rem);
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgba(255, 255, 255, 0.65);
+  word-break: break-all;
+  line-height: 1.35;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.fuente-link:hover {
+  color: #38e1ff;
+  text-decoration-color: #38e1ff;
+  text-shadow: 0 0 12px rgba(56, 225, 255, 0.65);
+}
+
+.fuente-link:active {
+  color: #38e1ff;
+}
+
+/* ==========================================================================
+   INDICADOR DE SCROLL AUTOMÁTICO EN EL MEDIO (15 SEGUNDOS DE INACTIVIDAD)
+   ========================================================================== */
+.scroll-indicator-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.6s;
+}
+
+.scroll-indicator-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.scroll-indicator-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px 14px;
+  background: rgba(8, 14, 22, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
+  gap: 6px;
+  user-select: none;
+}
+
+.scroll-mouse-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-wheel-tick {
+  animation: scrollWheelMove 1.8s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: center;
+}
+
+@keyframes scrollWheelMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(11px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+
+.scroll-arrows-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: -2px;
+}
+
+.scroll-arrow-svg {
+  display: block;
+}
+
+.scroll-arrow-svg.arrow-1 {
+  animation: scrollArrowPulse 1.8s infinite ease-in-out;
+}
+
+.scroll-arrow-svg.arrow-2 {
+  animation: scrollArrowPulse 1.8s infinite ease-in-out;
+  animation-delay: 0.25s;
+}
+
+@keyframes scrollArrowPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateY(3px);
+  }
+}

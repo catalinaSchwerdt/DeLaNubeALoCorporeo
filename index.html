@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infografia Interactiva</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Fondo: cubre el alto exacto de la página hasta el final de cables3 -->
+    <div class="background-layer">
+      <img src="img/fondo.svg" alt="Fondo 1" class="fondo-img" />
+      <img src="img/fondo.svg" alt="Fondo 2" class="fondo-img" />
+    </div>
+
+    <!-- Cables: definen la altura total del documento hasta el final de cables3 -->
+    <div class="cables-image">
+      <div class="cables1-wrapper">
+        <img src="img/AutoFuturistaCables.svg" alt="Auto Futurista Cables" class="auto-cables" />
+        <img src="img/cables1.svg" alt="Cables 1" />
+      </div>
+      <div class="cables-gap"></div>
+      <div class="cables2-wrapper">
+        <img src="img/relojDeArenaCables.svg" alt="Reloj de Arena" class="reloj-cables" />
+        <img src="img/cables2.svg" alt="Cables 2" />
+      </div>
+      <div class="cables-gap"></div>
+      <div class="cables3-wrapper">
+        <img src="img/robotCables.svg" alt="Robot Cables" class="robot-cables" />
+        <img src="img/cables3.svg" alt="Cables 3" />
+      </div>
+    </div>
+
+    <!-- Contenido de la infografia superpuesto sobre el fondo -->
+    <div class="content">
+      <header class="infografia-header">
+        <h1 class="infografia-titulo">
+          <span class="titulo-linea-1 font-gantari">De la</span>
+          <span class="titulo-linea-2">
+            <span class="font-gasoek">NUBE</span>
+            <span class="font-gantari palabra-enlace">a lo</span>
+            <span class="font-gasoek">CORPOREO</span>
+          </span>
+        </h1>
+
+        <h2 class="infografia-subtitulo font-gantari">Agentes, Robots y su desarrollo</h2>
+
+        <p class="infografia-intro font-gantari">
+          La <span class="texto-destacado">Inteligencia Artificial</span> o <span class="texto-destacado">IA</span> como
+          suelen llamarla, dejó de ser una idea propia de la ciencia ficción para convertirse en <span
+            class="texto-destacado">parte de nuestra vida cotidiana</span>. A medida que la tecnología avanza, la <span
+            class="texto-destacado">frontera entre lo digital y lo físico</span> comienza a hacerse cada vez más difusa.
+
+        </p>
+
+        <div class="botones-intro">
+          <button class="btn-intro font-gantari" id="btn-que-es-ia">¿Qué es una IA?</button>
+          <button class="btn-intro font-gantari" id="btn-funciones">¿Qué funciones puede cumplir?</button>
+        </div>
+      </header>
+
+      <!-- ====== NUCLEO 1: entre cables1 y cables2 ====== -->
+      <section class="nucleo nucleo-1">
+        <h2 class="nucleo-titulo">
+          <span class="nucleo-titulo-l1 font-gantari">Desde los</span>
+          <span class="nucleo-titulo-l2 font-gasoek">PRIMEROS AGENTES</span>
+        </h2>
+
+        <h3 class="nucleo-subtitulo font-gantari">IAs generativas y su alcance</h3>
+
+        <p class="nucleo-parrafo font-gantari">
+          ¿Sabés qué son los <span class="texto-destacado">agentes de IA</span>?<br />
+          Un sistema capaz de utilizar IA para alcanzar un objetivo. Puede analizar información, planificar
+          acciones,<br />tomar decisiones y adaptarse durante el proceso.
+        </p>
+
+        <!-- SVG decorativo del primer núcleo -->
+        <div class="nucleo-svg-wrapper">
+          <img src="img/circulos1erNucleo.svg" alt="Círculos primer núcleo" class="nucleo-svg" />
+        </div>
+
+        <!-- Botones de emergencia funcionales inspirados en Botones.png -->
+        <div class="botones-emergencia">
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-tipos-ia" aria-label="Tipos de IA">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">Tipos de IA</span>
+          </div>
+
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-ias-actuales" aria-label="IAs Actuales">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">IAs Actuales</span>
+          </div>
+
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-rango-etario" aria-label="Rango etario de uso">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">Rango etario<br>de uso</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== NUCLEO 2: entre cables2 y cables3 ====== -->
+      <section class="nucleo nucleo-2">
+        <h2 class="nucleo-titulo">
+          <span class="nucleo-titulo-l1 font-gantari">Los</span>
+          <span class="nucleo-titulo-l2">
+            <span class="font-gasoek">ROBOTS</span>
+            <span class="font-gantari palabra-enlace">del siglo</span>
+            <span class="font-gasoek">XXI</span>
+          </span>
+        </h2>
+
+        <h3 class="nucleo-subtitulo font-gantari">¿Criterio propio?</h3>
+
+        <p class="nucleo-parrafo font-gantari">
+          ¿La <span class="texto-destacado">IA</span> y los <span class="texto-destacado">Robots</span>
+          combinados?<br />
+          Cuando la IA sale del mundo digital y se incorpora a sistemas físicos,
+          puede transformar decisiones en acciones reales. La combinación de IA y
+          robótica permite desarrollar máquinas capaces de realizar tareas de forma autónoma o semiautónoma, mientras
+          que los robots industriales aportan precisión, rapidez y fuerza para
+          facilitar y transformar el trabajo humano.
+        </p>
+
+        <!-- SVG decorativo del segundo núcleo -->
+        <div class="nucleo-svg-wrapper">
+          <img src="img/circulos2doNucleo.svg" alt="Círculos segundo núcleo" class="nucleo-svg" />
+        </div>
+
+        <!-- Botones de emergencia funcionales inspirados en Botones.png -->
+        <div class="botones-emergencia">
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-que-es" aria-label="¿Qué es?">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">¿Qué es?</span>
+          </div>
+
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-que-tipos-hay" aria-label="¿Qué tipos hay?">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">¿Qué tipos hay?</span>
+          </div>
+
+          <div class="btn-emergencia-item">
+            <button class="btn-emergencia" id="btn-robots-ia" aria-label="Robots + IA">
+              <span class="btn-base">
+                <span class="btn-cap"></span>
+              </span>
+            </button>
+            <span class="btn-emergencia-label font-gantari">Robots + IA</span>
+          </div>
+        </div>
+
+        <!-- Botón destacado: ¡Descubrí que robot sos! -->
+        <div class="nucleo-accion-wrapper">
+          <button class="btn-intro btn-magenta font-gantari" id="btn-descubri-robot">¡DESCUBRÍ QUE ROBOT SOS!</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Botón de información en esquina inferior derecha (futuro popup) -->
+    <button class="btn-informacion" id="btn-informacion" aria-label="Información">
+      <img src="img/informacion.svg" alt="Información" class="informacion-icon" />
+    </button>
+
+  </div>
+
+  <!-- Modal Popup: ¿Qué es una IA? (intro, primer botón) -->
+  <div id="modal-que-es-ia" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-que-es-ia" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/queEsUnaIA.png" alt="¿Qué es una IA?" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: ¿Qué funciones puede cumplir? (intro, segundo botón) -->
+  <div id="modal-funciones" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-funciones" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/funcionesQueCumple.png" alt="¿Qué funciones puede cumplir?" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: Quiz "¿Descubrí que robot sos?" (fondoQuiz.svg) -->
+  <div id="modal-quiz" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card">
+      <button class="quiz-close-btn" id="btn-cerrar-quiz" aria-label="Cerrar quiz">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/fondoQuiz.svg" alt="Fondo Quiz" class="quiz-bg-img" />
+      <div class="quiz-content" id="quiz-content">
+        <p class="quiz-pregunta font-gantari">En tu grupo de amigos, ¿cuál es tu cualidad más destacada?</p>
+        <div class="quiz-opciones">
+          <button class="quiz-opcion font-gantari" data-respuesta="A">A) Eficiencia</button>
+          <button class="quiz-opcion font-gantari" data-respuesta="B">B) Hospitalidad</button>
+          <button class="quiz-opcion font-gantari" data-respuesta="C">C) Curiosidad</button>
+          <button class="quiz-opcion font-gantari" data-respuesta="D">D) Audacia</button>
+          <button class="quiz-opcion font-gantari" data-respuesta="E">E) Autocontrol</button>
+          <button class="quiz-opcion font-gantari" data-respuesta="F">F) Empatía</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup: ¿Qué es un robot? (Nucleo 2) -->
+  <div id="modal-que-es" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-que-es" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/¿queEsUnRobot¿.png" alt="¿Qué es un robot?" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: ¿Qué tipos hay? (Nucleo 2) -->
+  <div id="modal-que-tipos-hay" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-que-tipos-hay" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/¿queTiposHay¿1.svg" alt="¿Qué tipos de robots hay?" class="modal-card-img" />
+      <!-- Botones de categoría superpuestos sobre el SVG -->
+      <div class="tipos-botones-overlay">
+        <button class="btn-intro btn-tipos font-gantari" id="btn-tipos-cronologia">Según su cronología</button>
+        <button class="btn-intro btn-tipos font-gantari" id="btn-tipos-funcion">Según su función</button>
+        <button class="btn-intro btn-tipos font-gantari" id="btn-tipos-estructura">Según su estructura</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup: Robots + IA (Nucleo 2, tercer botón) -->
+  <div id="modal-robots-ia" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Cruz de cierre en la parte superior derecha -->
+      <button class="quiz-close-btn" id="btn-cerrar-robots-ia" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/robotMasIA1.svg" alt="Robots + Inteligencia Artificial" class="modal-card-img" />
+      <!-- Fila de 3 botones alineados al lateral izquierdo de la mano robótica, debajo del contenido -->
+      <div class="robots-ia-botones-overlay">
+        <button class="btn-intro btn-ia font-gantari" id="btn-ia-ameca">AMECA</button>
+        <button class="btn-intro btn-ia font-gantari" id="btn-ia-spot">Spot</button>
+        <button class="btn-intro btn-ia font-gantari" id="btn-ia-atlas">Atlas</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 1: Según su cronología (¿queTiposHay¿2.png) -->
+  <div id="modal-tipos-cronologia" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha para volver al popup inicial -->
+      <button class="modal-back-btn" id="btn-volver-tipos-cronologia" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-tipos-cronologia" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/¿queTiposHay¿2.png" alt="Según su cronología" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 2: Según su función (¿queTiposHay¿3.svg) -->
+  <div id="modal-tipos-funcion" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha para volver al popup inicial -->
+      <button class="modal-back-btn" id="btn-volver-tipos-funcion" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-tipos-funcion" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/¿queTiposHay¿3.svg" alt="Según su función" class="modal-card-img" />
+      <!-- Capa de 8 botones rodeando la imagen del robot central -->
+      <div class="funcion-botones-overlay">
+        <button class="btn-intro btn-funcion font-gantari pos-1" id="btn-func-industriales">🏭 INDUSTRIALES</button>
+        <button class="btn-intro btn-funcion font-gantari pos-2" id="btn-func-educativos">👨‍🏫 EDUCATIVOS</button>
+        <button class="btn-intro btn-funcion font-gantari pos-3" id="btn-func-exploracion">🚀 DE EXPLORACIÓN</button>
+        <button class="btn-intro btn-funcion font-gantari pos-4" id="btn-func-medicos">🏥 MÉDICOS</button>
+        <button class="btn-intro btn-funcion font-gantari pos-5" id="btn-func-militares">🪖 MILITARES</button>
+        <button class="btn-intro btn-funcion font-gantari pos-6" id="btn-func-investigacion">🔬 DE
+          INVESTIGACIÓN</button>
+        <button class="btn-intro btn-funcion font-gantari pos-7" id="btn-func-domesticos">🏠 DOMÉSTICOS</button>
+        <button class="btn-intro btn-funcion font-gantari pos-8" id="btn-func-servicios">🧑‍🔧 DE SERVICIOS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 3: Según su estructura (¿queTiposHay¿4.png) -->
+  <div id="modal-tipos-estructura" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha para volver al popup inicial -->
+      <button class="modal-back-btn" id="btn-volver-tipos-estructura" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-tipos-estructura" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/¿queTiposHay¿4.png" alt="Según su estructura" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- =======================================================================
+         MODALES DE CADA CATEGORÍA DE "SEGÚN SU FUNCIÓN"
+         ======================================================================= -->
+
+  <!-- 1. Modal: Industriales -->
+  <div id="modal-func-industriales" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-industriales" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-industriales" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoIndustriales.svg" alt="Robots Industriales" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 2. Modal: Educativos -->
+  <div id="modal-func-educativos" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-educativos" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-educativos" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoEducativos.svg" alt="Robots Educativos" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 3. Modal: De Exploración -->
+  <div id="modal-func-exploracion" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-exploracion" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-exploracion" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoDeExploracion.svg" alt="Robots de Exploración" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 4. Modal: Médicos -->
+  <div id="modal-func-medicos" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-medicos" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-medicos" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoMedicos.svg" alt="Robots Médicos" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 5. Modal: Militares -->
+  <div id="modal-func-militares" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-militares" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-militares" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoMilitares.svg" alt="Robots Militares" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 6. Modal: De Investigación -->
+  <div id="modal-func-investigacion" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-investigacion" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-investigacion" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoDeInvestigacion.svg" alt="Robots de Investigación" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 7. Modal: Domésticos -->
+  <div id="modal-func-domesticos" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-domesticos" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-domesticos" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoDomesticos.svg" alt="Robots Domésticos" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- 8. Modal: De Servicios -->
+  <div id="modal-func-servicios" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-func-servicios" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-func-servicios" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/tipoDeServicio.svg" alt="Robots de Servicios" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal: AMECA -->
+  <div id="modal-ia-ameca" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha volver -->
+      <button class="modal-back-btn" id="btn-volver-ia-ameca" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-ia-ameca" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/ameca.png" alt="AMECA" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal: Spot -->
+  <div id="modal-ia-spot" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha volver -->
+      <button class="modal-back-btn" id="btn-volver-ia-spot" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-ia-spot" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/spot.png" alt="Spot" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal: Atlas -->
+  <div id="modal-ia-atlas" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <!-- Flecha volver -->
+      <button class="modal-back-btn" id="btn-volver-ia-atlas" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <!-- Cruz de cierre -->
+      <button class="quiz-close-btn" id="btn-cerrar-ia-atlas" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoRobots/atlas.png" alt="Atlas" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: Tipos de IA (Nucleo 1) -->
+  <div id="modal-tipos-ia" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-tipos-ia" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/TiposDeIA.svg" alt="Tipos de IA" class="modal-card-img" />
+      <!-- Columna vertical de 3 botones superpuestos sobre el SVG -->
+      <div class="tipos-ia-botones-overlay">
+        <button class="btn-intro btn-tipo-ia font-gantari" id="btn-tipo-ani">Inteligencia Artificial estrecha
+          (ANI)</button>
+        <button class="btn-intro btn-tipo-ia font-gantari" id="btn-tipo-agi">Inteligencia Artificial general
+          (AGI)</button>
+        <button class="btn-intro btn-tipo-ia font-gantari" id="btn-tipo-asi">Superinteligencia Artificial
+          (ASI)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 1: ANI (ANI.svg) -->
+  <div id="modal-ani" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-ani" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-ani" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/ANI.svg" alt="Inteligencia Artificial estrecha (ANI)" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 2: AGI (AGI.svg) -->
+  <div id="modal-agi" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-agi" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-agi" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/AGI.svg" alt="Inteligencia Artificial general (AGI)" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 3: ASI (ASI.svg) -->
+  <div id="modal-asi" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-asi" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-asi" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/ASI.svg" alt="Superinteligencia Artificial (ASI)" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: IAs Actuales (Nucleo 1) -->
+  <div id="modal-ias-actuales" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-ias-actuales" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/IAsActuales.svg" alt="IAs Actuales" class="modal-card-img" />
+      <!-- Columna vertical de 4 botones superpuestos sobre el SVG -->
+      <div class="ias-actuales-botones-overlay">
+        <button class="btn-intro btn-ias-actuales font-gantari" id="btn-ias-generativas">IAs generativas</button>
+        <button class="btn-intro btn-ias-actuales font-gantari" id="btn-ias-multimodales">IAs multimodales</button>
+        <button class="btn-intro btn-ias-actuales font-gantari" id="btn-ias-razonamiento">IAs de razonamiento</button>
+        <button class="btn-intro btn-ias-actuales font-gantari" id="btn-agentes-ia">Agentes de IA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 1: IAs generativas (IAsActuales1.svg) -->
+  <div id="modal-ias-generativas" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-ias-generativas" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-ias-generativas" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/IAsActuales1.svg" alt="IAs generativas" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 2: IAs multimodales (IAsActuales2.svg) -->
+  <div id="modal-ias-multimodales" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-ias-multimodales" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-ias-multimodales" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/IAsActuales2.svg" alt="IAs multimodales" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 3: IAs de razonamiento (IAsActuales3.svg) -->
+  <div id="modal-ias-razonamiento" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-ias-razonamiento" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-ias-razonamiento" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/IAsActuales3.svg" alt="IAs de razonamiento" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup Sub-categoría 4: Agentes de IA (IAsActuales4.svg) -->
+  <div id="modal-agentes-ia" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="modal-back-btn" id="btn-volver-agentes-ia" aria-label="Volver">
+        <svg class="modal-back-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <button class="quiz-close-btn" id="btn-cerrar-agentes-ia" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/IAsActuales4.svg" alt="Agentes de IA" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: Rango etario de uso (Nucleo 1) -->
+  <div id="modal-rango-etario" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-rango-etario" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/cardsNucleoIA/rangoEtario.svg" alt="Rango etario de uso" class="modal-card-img" />
+    </div>
+  </div>
+
+  <!-- Modal Popup: Fuentes de información (informacion.svg / fuentes.svg) -->
+  <div id="modal-fuentes" class="modal-quiz-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="quiz-card modal-image-card">
+      <button class="quiz-close-btn" id="btn-cerrar-fuentes" aria-label="Cerrar">
+        <svg class="quiz-close-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="img/fuentes.svg" alt="Fuentes de información" class="modal-card-img" />
+      <!-- Enlaces a fuentes organizados verticalmente con Gantari regular -->
+      <div class="fuentes-links-overlay">
+        <a href="https://www.murkyrobot.com/review/robotica/que-es-un-robot" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://www.murkyrobot.com/review/robotica/que-es-un-robot</a>
+        <a href="https://me-l.co/tfwjtkzb" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://me-l.co/tfwjtkzb</a>
+        <a href="https://me-l.co/7d0e7gra" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://me-l.co/7d0e7gra</a>
+        <a href="https://cloud.google.com/discover/what-are-ai-agents?hl=es" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://cloud.google.com/discover/what-are-ai-agents?hl=es</a>
+        <a href="https://me-l.co/ck1jz7wf" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://me-l.co/ck1jz7wf</a>
+        <a href="https://developers.openai.com/learn/agents?utm_source=chatgpt.com" target="_blank"
+          rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://developers.openai.com/learn/agents?utm_source=chatgpt.com</a>
+        <a href="https://me-l.co/p9rwj2zm" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://me-l.co/p9rwj2zm</a>
+        <a href="https://www.nu.edu/blog/ai-statistics-trends/" target="_blank" rel="noopener noreferrer"
+          class="fuente-link font-gantari">https://www.nu.edu/blog/ai-statistics-trends/</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Indicador de Scroll en el inicio -->
+  <div id="scroll-prompt-indicator" class="scroll-indicator-overlay" aria-hidden="true">
+    <div class="scroll-indicator-card">
+      <div class="scroll-mouse-icon">
+        <svg width="34" height="54" viewBox="0 0 34 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="30" height="50" rx="15" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2"
+            fill="rgba(8, 14, 24, 0.6)" />
+          <line class="scroll-wheel-tick" x1="17" y1="11" x2="17" y2="19" stroke="#38e1ff" stroke-width="2.5"
+            stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="scroll-arrows-down">
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" class="scroll-arrow-svg arrow-1">
+          <path d="M2 2L9 8L16 2" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" class="scroll-arrow-svg arrow-2">
+          <path d="M2 2L9 8L16 2" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
